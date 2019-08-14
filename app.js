@@ -16,7 +16,6 @@ app.locals.ENV_DEVELOPMENT = env == 'development';
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
-// app.set('view engine', 'handlebars');
 
 app.use(favicon(path.join(__dirname, 'public/img/favicons/favicon.ico')));
 app.use(logger('dev'));
