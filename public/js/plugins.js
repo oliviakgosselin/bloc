@@ -1,7 +1,7 @@
 // --------------------------------------------- //
 // Loader Start
 // --------------------------------------------- //
-$(window).on("load", function() {
+$(window).on("load", function () {
 
   "use strict";
 
@@ -11,14 +11,14 @@ $(window).on("load", function() {
   $(".loader-caption").removeClass('slideInUp').addClass('fadeOutDown');
 
   // Morphing Transition Animation
-  setTimeout(function(){
+  setTimeout(function () {
     var loaderSlogan = $(".loader-slogan");
     // If there is Slogan - Morphing Transition Animation After Slogan
     var typedLoader = new Typed('#slogan', {
       stringsElement: '#slogan-strings',
       typeSpeed: 40,
-      onComplete: function(self) {
-        setTimeout(function(){
+      onComplete: function (self) {
+        setTimeout(function () {
           var loading = anime({
             targets: '.loader',
             translateY: '-200vh',
@@ -36,12 +36,12 @@ $(window).on("load", function() {
             duration: 800,
             delay: 0
           });
-        },1000);
+        }, 1000);
       },
     });
     // Removing 'overflow: hidden' Property from <body>
     $('body').removeClass('overflow-hidden');
-  },600);
+  }, 600);
 
 });
 // --------------------------------------------- //
@@ -51,7 +51,7 @@ $(window).on("load", function() {
 // --------------------------------------------- //
 // Punchy Template Plugins Custom Settings Start
 // --------------------------------------------- //
-$(function() {
+$(function () {
 
   // --------------------------------------------- //
   // Fullpage.js Plugin Settings Start
@@ -59,13 +59,13 @@ $(function() {
   var mainContent = $('main');
 
   mainContent.fullpage({
-    anchors: ['main', 'what-we-do', 'why-us', 'perks', 'review', 'schools', 'contact'],
+    anchors: ['main', 'what-we-do', 'perks', 'our-buildings', 'schools', 'waitlist'],
     menu: '#menu',
     responsiveWidth: 1183,
     navigation: false,
     autoScrolling: false,
     fitToSection: false,
-	  verticalCentered: false,
+    verticalCentered: false,
     loopBottom: false,
     sectionSelector: 'section',
   });
@@ -76,9 +76,9 @@ $(function() {
   // --------------------------------------------- //
   // Typed.js Plugin Settings Start
   // --------------------------------------------- //
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     var animatedHeadline = $(".animated-headline");
-    if(animatedHeadline.length){
+    if (animatedHeadline.length) {
       var typed = new Typed('#typed', {
         stringsElement: '#typed-strings',
         loop: true,
@@ -97,24 +97,24 @@ $(function() {
   // --------------------------------------------- //
   // Write-a-Line Form Start
   // --------------------------------------------- //
-  $("#waitlist-form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
+  $("#waitlist-form").submit(function () { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function () {
       $('.waitlist').find('.form').addClass('is-hidden');
       $('.waitlist').find('.reply-group').addClass('is-visible');
-			setTimeout(function() {
-				// Done Functions
+      setTimeout(function () {
+        // Done Functions
         $('.waitlist').find('.reply-group').removeClass('is-visible');
         $('.waitlist').find('.form').delay(300).removeClass('is-hidden');
-				th.trigger("reset");
-			}, 5000);
-		});
-		return false;
-	});
+        th.trigger("reset");
+      }, 5000);
+    });
+    return false;
+  });
   // --------------------------------------------- //
   // Write-a-Line Form End
   // --------------------------------------------- //
@@ -122,10 +122,10 @@ $(function() {
   // --------------------------------------------- //
   // Homescreen Morphing Objects Start
   // --------------------------------------------- //
-  
+
   // Menu Button Morphing Object
   var menuDecoration = $(".menu-btn-morphing-object");
-  if(menuDecoration.length){
+  if (menuDecoration.length) {
     var morphing = anime({
       targets: '.menu-btn-morphing-path',
       d: [
@@ -149,7 +149,7 @@ $(function() {
   // --------------------------------------------- //
   // Blockquote Morphing Object
   var quoteDecoration = $(".quote-morphing-object");
-  if(quoteDecoration.length){
+  if (quoteDecoration.length) {
     var morphing = anime({
       targets: '.quote-morphing-path',
       d: [

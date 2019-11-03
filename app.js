@@ -4,7 +4,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const exphbs  = require('express-handlebars');
+const exphbs = require('express-handlebars');
 
 const app = express();
 
@@ -16,7 +16,6 @@ app.locals.ENV_DEVELOPMENT = env == 'development';
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
-
 app.use(favicon(path.join(__dirname, 'public/img/favicons/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
