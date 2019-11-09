@@ -1974,6 +1974,11 @@ header .logo img {
 	color: black
 }
 
+.popup-title .subtitle {
+	font: normal 500 1.2rem/1.5 Poppins, sans-serif;
+	color: black
+}
+
 .popup-title .divider {
 	position: relative;
 	display: block;
@@ -2004,6 +2009,9 @@ header .logo img {
 @media only screen and (min-width:768px) {
 	.popup-title .title {
 		font-size: 4rem
+	}
+	.popup-title .subtitle {
+		font-size: 3rem
 	}
 }
 
@@ -2358,7 +2366,13 @@ header .logo img {
 }
 
 .schools-section .school-ctn .school-ctn__img {
-    width: 50%;
+    width: 80%;
+}
+
+@media only screen and (min-width:768px) {
+	.schools-section .school-ctn .school-ctn__img {
+		width: 50%;
+	}
 }
 
 .perks-section .section-title {
@@ -2638,7 +2652,7 @@ header .logo img {
 
 	.perks figure .perk-image-container .perk-image--large {
 		height: auto;
-		top: -100px;
+		top: -155px;
 	}
 	.perks figure figcaption {
 		position: absolute;
