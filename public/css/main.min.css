@@ -1939,7 +1939,7 @@ header .logo img {
 	transition: opacity .3s, transform .3s, -webkit-transform .3s, -moz-transform .3s
 }
 
-@media only screen and (min-width:1200px) {
+/* @media only screen and (min-width:1200px) {
 	.popup-wrapper,
 	.popup-wrapper--ty,
 	.popup-wrapper--error {
@@ -1953,7 +1953,7 @@ header .logo img {
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%)
 	}
-}
+} */
 
 .popup-title {
 	position: relative;
